@@ -347,7 +347,7 @@ def local_median(data_ma, kernel):
     col_num, conv_arr = _dummy_cols(dummy_data, kernel, value=None)
 
     # Median filter
-    med_arr = ndimage.generic_filter(conv_arr, np.nanmedian, 
+    med_arr = ndimage.generic_filter(conv_arr, bn.nanmedian,
                                      footprint=kernel, mode='wrap')
 
     # Remove added columns
